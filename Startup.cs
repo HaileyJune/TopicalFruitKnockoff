@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
+using TopicalFruitKnockoff.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace TopicalFruitKnockoff
 {
@@ -20,6 +22,7 @@ namespace TopicalFruitKnockoff
             // Add framework services.
             services.AddMvc();
             services.AddSession();
+            services.AddDbContext<FrootsContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

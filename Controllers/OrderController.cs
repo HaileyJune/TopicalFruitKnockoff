@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Http;
 
 namespace TopicalFruitKnockoff.Controllers
 {
-    public class HomeController : Controller
+    public class OrderController : Controller
     {
         // GET: /Home/
         [HttpGet]

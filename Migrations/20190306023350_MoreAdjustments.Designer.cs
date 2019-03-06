@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TopicalFruitKnockoff.Models;
 
 namespace TopicalFruitKnockoff.Migrations
 {
     [DbContext(typeof(FrootsContext))]
-    partial class FrootsContextModelSnapshot : ModelSnapshot
+    [Migration("20190306023350_MoreAdjustments")]
+    partial class MoreAdjustments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -31,11 +33,6 @@ namespace TopicalFruitKnockoff.Migrations
                     b.HasKey("CatagoryId");
 
                     b.ToTable("Catagories");
-
-                    b.HasData(
-                        new { CatagoryId = 1, Desctiption = "", ImgUrl = "Testing", Name = "Featured Products" },
-                        new { CatagoryId = 2, Desctiption = "All smoothies are 24 oz. and made with turbinado unless otherwise noted or requested. Splenda substitute available.", ImgUrl = "Testing", Name = "Classic Smoothies" }
-                    );
                 });
 
             modelBuilder.Entity("TopicalFruitKnockoff.Models.Item", b =>
@@ -62,12 +59,6 @@ namespace TopicalFruitKnockoff.Migrations
                     b.HasIndex("OrderId");
 
                     b.ToTable("Items");
-
-                    b.HasData(
-                        new { ItemId = 1, CatagoryId = 1, Description = "unsweetened vanilla almond milk, mango, pineapple & turmeric", ImgUrl = "https://olo-images-live.imgix.net/bf/bfd6170e52ec44259f5745202c350e09.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=170&h=113&fit=crop&s=2af6f386acd3bbd2b1cc5d1b4a47aebc", Name = "Mango Tumeric", Price = 5.29 },
-                        new { ItemId = 2, CatagoryId = 1, Description = "unsweetened vanilla almond milk, strawberries, cinnamon & topped with granola", ImgUrl = "https://olo-images-live.imgix.net/fc/fcc5c1cb95a34a6a9feb446c48099e48.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=170&h=113&fit=crop&s=0a8b0e6c1abe042d19719a48067d02b1", Name = "Strawberry Granola", Price = 5.29 },
-                        new { ItemId = 3, CatagoryId = 2, Description = "strawberries, pineapple, white chocolate & coconut (500 cal)", ImgUrl = "https://olo-images-live.imgix.net/fb/fb690aae84b64c148317ac7809183f4b.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=170&h=113&fit=crop&s=d67aa2c28779fdc6858aef8d8f410eb2", Name = "Bahama Mama", Price = 5.99 }
-                    );
                 });
 
             modelBuilder.Entity("TopicalFruitKnockoff.Models.Order", b =>

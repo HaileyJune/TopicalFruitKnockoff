@@ -11,6 +11,5 @@ namespace TopicalFruitKnockoff.Models
         public string Name {get; set;}
         public string Desctiption {get;set;}
         public string ImgUrl {get;set;}
-        public List<Item> Items {get;set;}
     }
 }

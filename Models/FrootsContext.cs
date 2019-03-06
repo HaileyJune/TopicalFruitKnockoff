@@ -29,8 +29,8 @@ namespace TopicalFruitKnockoff.Models
 
 
             modelBuilder.Entity<Catagory>().HasData(
-                new Catagory {CatagoryId = 1, Name = "Featured Products", Desctiption = "", ImgUrl = "Testing"},
-                new Catagory {CatagoryId = 2, Name = "Classic Smoothies", Desctiption = "All smoothies are 24 oz. and made with turbinado unless otherwise noted or requested. Splenda substitute available.", ImgUrl = "Testing"}
+                new Catagory {CatagoryId = 1, Name = "Featured Products", Desctiption = "", ImgUrl = "Testing", Active = true},
+                new Catagory {CatagoryId = 2, Name = "Classic Smoothies", Desctiption = "All smoothies are 24 oz. and made with turbinado unless otherwise noted or requested. Splenda substitute available.", ImgUrl = "Testing", Active = false}
             );
         }
     }

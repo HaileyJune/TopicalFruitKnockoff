@@ -1,6 +1,8 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+@using TopicalFruitKnockoff.Models;
+@Model BigView
 <!-- info box -->
 <div class = "container"> 
     <h1>Bellevue Tropical Smoothie Cafe</h1>
@@ -28,13 +30,16 @@
     <div class ="row">
         <!-- menu -->
         <div class = "col">
-            @Html.Partial("NavigationPartial")
+            @{List<String> Nav = ViewBag.NavBar;}
+            @Html.Partial("NavigationPatial", Nav)
         </div>
         <div class = "col">
-            @Html.Partial("CatagoryPartial")
+            @foreach (Catagory cat in ViewBag.Menu)
+            {
+                @Html.Partial("CatagoryPartial, cat")
+            }
         </div>
         <div class = "col">
-            @Html.Partial("OrderPartial")
         </div>
     </div>
 </div>

@@ -10,5 +10,6 @@ namespace TopicalFruitKnockoff.Models
         public string Desctiption {get;set;}
         public string ImgUrl {get;set;}
         public virtual ICollection<Item> Items { get; set; }
+        public bool Active {get;set;}
     }
 }

@@ -1,1 +1,16 @@
-@Model Catagory
+@using TopicalFruitKnockoff.Models
+@model Catagory
+
+<!-- img -->
+<h3>@Model.Name</h3>
+<p>@Model.Desctiption</p>
+
+@{
+    foreach (Item item in Model.Items)
+    {
+        <p>---------------</p>
+        <h4>@item.Name</h4>
+        <!-- img -->
+        <p>@item.Description</p>
+    }
+}

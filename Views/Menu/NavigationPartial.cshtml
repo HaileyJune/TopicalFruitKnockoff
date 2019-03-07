@@ -1,1 +1,10 @@
-@Model List<String>
+@model List<Catagory>
+
+<ul>
+    @{foreach (Catagory cat in Model)
+    {
+        <li>
+            <a href="/catagory/@cat.CatagoryId">@cat.Name</a>
+        </li>
+    }}
+</ul>

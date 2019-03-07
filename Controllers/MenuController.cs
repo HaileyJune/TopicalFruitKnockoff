@@ -22,8 +22,7 @@ namespace TopicalFruitKnockoff.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            List<String> NavBar = dbContext.Catagories
-                                    .Select(c => c.Name)
+            List<Catagory> NavBar = dbContext.Catagories
                                     .ToList();
             ViewBag.NavBar = NavBar;
 
@@ -37,11 +36,11 @@ namespace TopicalFruitKnockoff.Controllers
         }
 
         [HttpGet]
-        [Route("catagory/{catagory}")]
-        public IActionResult SelectCatagory(String selected)
+        [Route("catagory/{catagoryid}")]
+        public IActionResult SelectCatagory(String catagoryid)
         {
 
-            if(selected == "ViewAll")
+            if(catagoryid == "ViewAll")
             {
                 foreach (Catagory cat in dbContext.Catagories)
                 {
@@ -55,12 +54,16 @@ namespace TopicalFruitKnockoff.Controllers
                     cat.Active = false;
                 }
 
-                Catagory selectedCat = dbContext.Catagories
-                                    .Where(c => c.Name == selected)
-                                    .FirstOrDefault();
-                selectedCat.Active = true;
+                if(Int32.TryParse(catagoryid, out int x))
+                {
+                    Catagory selectedCat = dbContext.Catagories
+                                        .Where(c => c.CatagoryId == x)
+                                        .FirstOrDefault();
+                    selectedCat.Active = true;
+                }
             }
 
+            dbContext.SaveChanges();
             return Redirect("/");
         }
 

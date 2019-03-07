@@ -29,7 +29,7 @@
             @{List<Catagory> Nav = ViewBag.NavBar;}
             @Html.Partial("NavigationPartial", Nav)
         </div>
-        <div class = "col no-gutters">
+        <div class = "col-5 no-gutters">
             @foreach (Catagory cat in ViewBag.Menu)
             {
                 @Html.Partial("CatagoryPartial", cat)

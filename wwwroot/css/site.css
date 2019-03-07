@@ -1,6 +1,6 @@
 /* This is Hailey's CSS: */
 
-body
+*
 {
     color: #555;
     font-family: "Proxima Nova A W07 Regular",sans-serif;
@@ -34,7 +34,7 @@ body
     line-height: 1;
     font-size: 22px;
     font-family: "Proxima Nova W08 Reg",sans-serif;
-    color: black;    
+    color: #555;  
     text-decoration: none;
     text-transform: capitalize;
 }
@@ -56,6 +56,11 @@ body
 }
 .product-name {
     font-size: 21px;
+    color: black;
+    text-decoration: none;
+}
+.product-name:hover {
+    text-decoration: underline;
 }
 
 .section-head

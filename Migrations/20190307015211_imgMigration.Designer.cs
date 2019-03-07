@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TopicalFruitKnockoff.Models;
 
 namespace TopicalFruitKnockoff.Migrations
 {
     [DbContext(typeof(FrootsContext))]
-    partial class FrootsContextModelSnapshot : ModelSnapshot
+    [Migration("20190307015211_imgMigration")]
+    partial class imgMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,8 +37,8 @@ namespace TopicalFruitKnockoff.Migrations
                     b.ToTable("Catagories");
 
                     b.HasData(
-                        new { CatagoryId = 1, Active = true, Desctiption = "", ImgUrl = "wwwroot/images/Featured.PNG", Name = "Featured Products" },
-                        new { CatagoryId = 2, Active = false, Desctiption = "All smoothies are 24 oz. and made with turbinado unless otherwise noted or requested. Splenda substitute available.", ImgUrl = "wwwroot/images/Classic.PNG", Name = "Classic Smoothies" }
+                        new { CatagoryId = 1, Active = true, Desctiption = "", ImgUrl = "C:/Users/haile/OneDrive/Documents/School/Projects/WebsitePractice/TopicalFruitKnockoff/wwwroot/images/Featured.PNG", Name = "Featured Products" },
+                        new { CatagoryId = 2, Active = false, Desctiption = "All smoothies are 24 oz. and made with turbinado unless otherwise noted or requested. Splenda substitute available.", ImgUrl = "C:/Users/haile/OneDrive/Documents/School/Projects/WebsitePractice/TopicalFruitKnockoff/wwwroot/images/Classic.PNG", Name = "Classic Smoothies" }
                     );
                 });
 

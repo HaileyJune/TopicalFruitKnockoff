@@ -1,1 +1,16 @@
 /*Write all of your CSS here*/
+
+.MenuHeader 
+{
+    font-family: "Proxima N W01 Bold",sans-serif;
+    font-weight: 400;
+    color: #df2a11;
+}
+
+.category
+{
+    border-bottom: 1px dotted #ccc;
+    font-family: "Proxima N W01 Bold",sans-serif;
+    margin-bottom: 2px;
+    padding: 7px 5px;
+}

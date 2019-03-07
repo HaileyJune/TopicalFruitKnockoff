@@ -1,7 +1,7 @@
 @using TopicalFruitKnockoff.Models
 @model Catagory
 
-<!-- img -->
+<img src=@Model.ImgUrl>
 <h3>@Model.Name</h3>
 <p>@Model.Desctiption</p>
 
@@ -10,7 +10,7 @@
     {
         <p>---------------</p>
         <h4>@item.Name</h4>
-        <!-- img -->
+        <img src=@item.ImgUrl>
         <p>@item.Description</p>
     }
 }

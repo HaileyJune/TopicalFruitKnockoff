@@ -1,10 +1,10 @@
 @using TopicalFruitKnockoff.Models;
 <!-- info box -->
-<div class = "container"> 
-    <h1 class ="MenuHeader">Bellevue Tropical Smoothie Cafe</h1>
+<div class = "container-fluid"> 
+    <h1 class="text-uppercase MenuHeader">Bellevue Tropical Smoothie Cafe</h1>
     <p>10495 NE 4th Street, Bellevue, WA, 98004</p>
 
-    <table>
+    <table class="MenuInfo">
         <tr>
             <td>Phone:</td>
             <td>(425) 590-9609</td>
@@ -20,27 +20,23 @@
     </table>
 </div>
 <!-- end info -->
-
-<body>
     <p></p>
     <p></p>
     <p></p>
-<div class = "container">
+<div class = "container-fluid">
     <div class ="row">
-        <div class = "col-sm-">
+        <div class = "col-md-auto no-gutters ">
             @{List<Catagory> Nav = ViewBag.NavBar;}
             @Html.Partial("NavigationPartial", Nav)
         </div>
-        <div class = "col">
+        <div class = "col no-gutters">
             @foreach (Catagory cat in ViewBag.Menu)
             {
                 @Html.Partial("CatagoryPartial", cat)
             }
         </div>
-        <div class = "col-sm-">
+        <div class = "col-sm- no-gutters ">
         </div>
     </div>
     <!-- end row -->
 </div>
-
-</body>

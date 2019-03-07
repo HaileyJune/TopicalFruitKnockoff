@@ -1,16 +1,65 @@
-/*Write all of your CSS here*/
+/* This is Hailey's CSS: */
+
+body
+{
+    color: #555;
+    font-family: "Proxima Nova A W07 Regular",sans-serif;
+    font-size: 14px;
+}
+
+.container
+{
+    margin-left: 0;
+}
 
 .MenuHeader 
 {
     font-family: "Proxima N W01 Bold",sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     color: #df2a11;
+    text-transform: capitalize;
 }
 
 .category
 {
     border-bottom: 1px dotted #ccc;
-    font-family: "Proxima N W01 Bold",sans-serif;
     margin-bottom: 2px;
     padding: 7px 5px;
+    line-height: 2;
+    width: 190px;
+}
+
+.category a
+{
+    line-height: 1;
+    font-size: 22px;
+    font-family: "Proxima Nova W08 Reg",sans-serif;
+    color: black;    
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.category a:hover
+{
+    color: #df2a11;
+    text-decoration: none;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.MenuInfo {
+    margin: 0;
+    width: 680px;
+}
+.product-name {
+    font-size: 21px;
+}
+
+.section-head
+{
+    font-size: 22px;
+    color: #df2a11;
 }

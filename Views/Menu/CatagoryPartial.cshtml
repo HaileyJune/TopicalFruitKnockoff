@@ -1,16 +1,23 @@
 @using TopicalFruitKnockoff.Models
 @model Catagory
 
-<img src=@Model.ImgUrl>
-<h3>@Model.Name</h3>
+<!-- <img src=@Model.ImgUrl> -->
+<div class="container-fluid">
+<h3 class="section-head">@Model.Name</h3>
 <p>@Model.Desctiption</p>
 
 @{
     foreach (Item item in Model.Items)
     {
-        <p>---------------</p>
-        <h4>@item.Name</h4>
-        <img src=@item.ImgUrl>
-        <p>@item.Description</p>
+            <div class="row">
+                <div class="col-md-auto">
+                    <img src=@item.ImgUrl>
+                </div>
+                <div class="col">
+                    <h4 class="product-name">@item.Name</h4>
+                    <p>@item.Description</p>
+                </div>
+            </div>
     }
 }
+</div>

@@ -4,7 +4,11 @@
     @{foreach (Catagory cat in Model)
     {
         <tr>
-            <td><a href="/catagory/@cat.CatagoryId">@cat.Name</a></td>
+            <td class="category">
+                <a href="/catagory/@cat.CatagoryId" class="text-uppercase">
+                    @cat.Name
+                </a>
+            </td>
         </tr>
     }}
 </table>

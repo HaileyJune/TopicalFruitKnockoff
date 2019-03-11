@@ -1,42 +1,49 @@
 @using TopicalFruitKnockoff.Models;
 <!-- info box -->
 <div class = "container-fluid"> 
-    <h1 class="text-uppercase MenuHeader">Bellevue Tropical Smoothie Cafe</h1>
-    <p>10495 NE 4th Street, Bellevue, WA, 98004</p>
+    <div class="row">
+        <div class="col">
 
-    <table class="MenuInfo">
-        <tr>
-            <td>Phone:</td>
-            <td>(425) 590-9609</td>
-        </tr>
-        <tr>
-            <td>Pickup hours:</td>
-            <td>Open today</td>
-        </tr>
-        <tr>
-            <td>Accepted Cards</td>
-            <td>Mastercard, Visa, Discover</td>
-        </tr>
-    </table>
-</div>
-<!-- end info -->
-    <p></p>
-    <p></p>
-    <p></p>
-<div class = "container-fluid">
-    <div class ="row">
-        <div class = "col-md-auto no-gutters ">
-            @{List<Catagory> Nav = ViewBag.NavBar;}
-            @Html.Partial("NavigationPartial", Nav)
+            <h1 class="text-uppercase MenuHeader">Bellevue Tropical Smoothie Cafe</h1>
+            <p>10495 NE 4th Street, Bellevue, WA, 98004</p>
+
+            <table class="MenuInfo">
+                <tr>
+                    <td>Phone:</td>
+                    <td>(425) 590-9609</td>
+                </tr>
+                <tr>
+                    <td>Pickup hours:</td>
+                    <td>Open today</td>
+                </tr>
+                <tr>
+                    <td>Accepted Cards</td>
+                    <td>Mastercard, Visa, Discover</td>
+                </tr>
+            </table>
+        <!-- end info -->
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class = "container-fluid">
+                <div class ="row">
+                    <div class = "col-md-auto no-gutters ">
+                        @{List<Catagory> Nav = ViewBag.NavBar;}
+                        @Html.Partial("NavigationPartial", Nav)
+                    </div>
+                    <div class = "col-5 no-gutters">
+                        @foreach (Catagory cat in ViewBag.Menu)
+                        {
+                            @Html.Partial("CatagoryPartial", cat)
+                        }
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class = "col-5 no-gutters">
-            @foreach (Catagory cat in ViewBag.Menu)
-            {
-                @Html.Partial("CatagoryPartial", cat)
-            }
-        </div>
-        <div class = "col-sm- no-gutters ">
+        <div class="col">
+            <div>
+                @Html.Partial("OrderPartial")
+            </div>
         </div>
     </div>
-    <!-- end row -->
 </div>

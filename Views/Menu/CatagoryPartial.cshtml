@@ -4,20 +4,20 @@
 <!-- <img src=@Model.ImgUrl> -->
 <div class="container-fluid">
 <h3 class="section-head">@Model.Name</h3>
-<p>@Model.Desctiption</p>
+<p class="menu">@Model.Desctiption</p>
 
 @{
     foreach (Item item in Model.Items)
     {
-            <div class="row">
-                <div class="col-md-auto">
-                    <img src=@item.ImgUrl>
-                </div>
-                <div class="col">
-                    <h4 class="product-name">@item.Name</h4>
-                    <p>@item.Description</p>
-                </div>
+        <div class="row menu">
+            <div class="col-md-auto">
+                <img src=@item.ImgUrl>
             </div>
+            <div class="col">
+                <h4 class="product-name">@item.Name</h4>
+                <p>@item.Description</p>
+            </div>
+        </div>
     }
 }
 </div>

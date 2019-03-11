@@ -56,6 +56,8 @@
 }
 .product-name {
     font-size: 21px;
+    /* font-family: "Proxima N W01 Bold",sans-serif; */
+    font-family: "Proxima N W01 Bold",sans-serif;
     color: black;
     text-decoration: none;
 }
@@ -67,4 +69,23 @@
 {
     font-size: 22px;
     color: #df2a11;
+}
+
+.menu
+{
+    width: 500px;
+}
+
+.order
+{
+    border: none;
+    border-bottom: 3px solid #f6aa26;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.basket-totals
+{
+    border-top: 1px dotted #ccc;
+    margin-top: 10px;
 }

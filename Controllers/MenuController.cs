@@ -40,7 +40,7 @@ namespace TopicalFruitKnockoff.Controllers
         public IActionResult SelectCatagory(String catagoryid)
         {
 
-            if(catagoryid == "ViewAll")
+            if(catagoryid == "viewall")
             {
                 foreach (Catagory cat in dbContext.Catagories)
                 {
